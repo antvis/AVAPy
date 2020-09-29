@@ -11,6 +11,7 @@ class TestDWUtils:
     """
     Test cases for AVAPy.data_wizard.utils
     """
+
     def test_is_empty_value(self):
         """Unit tests for function: is_empty_value"""
 

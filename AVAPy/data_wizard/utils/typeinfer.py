@@ -1,5 +1,5 @@
 """
-Util functions supporting module data_wizard.
+Util functions for type inference.
 """
 
 import re

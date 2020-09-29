@@ -5,7 +5,7 @@ AVA Python Library for Automatic Visual Analyze
 """
 
 from AVAPy.data_wizard.analyzer.fieldinfo import FieldInfo
-from AVAPy.data_wizard.utils.utils import *
+from AVAPy.data_wizard.utils import *
 
 from AVAPy.chart_advisor.aux.scatterplot import get_scatter_xy, get_scatter_json
 from AVAPy.chart_advisor.aux.line import get_line_xy, get_line_json

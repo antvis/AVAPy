@@ -2,7 +2,7 @@
 Class for analyzing data field.
 """
 
-import AVAPy.data_wizard.utils.utils as dwutil
+import AVAPy.data_wizard.utils as dwutil
 
 
 def infer_type_from_types(types):
@@ -120,6 +120,7 @@ class FieldInfo:
         """
         Return the 1st level inference for the type of a value.
         """
+
         if dwutil.is_empty_value(value):
             return "empty"
 
@@ -158,6 +159,7 @@ class FieldInfo:
         """
         Return all information collected for the field.
         """
+
         return self.__info
 
     @property
@@ -165,6 +167,7 @@ class FieldInfo:
         """
         Return a copy of the field, replace all empty values with None.
         """
+
         return self.__data_list
 
     @property
@@ -193,6 +196,7 @@ class FieldInfo:
         """
         Number of kinds of non-empty value in the field.
         """
+
         return self.__info["distinct"]
 
     @property
@@ -200,6 +204,7 @@ class FieldInfo:
         """
         Return the 1st level inference for the type of field.
         """
+
         return self.__info["type"]
 
     @property
@@ -207,6 +212,7 @@ class FieldInfo:
         """
         Return the 2nd level inference for the type of field.
         """
+
         return self.__info["implied"]
 
     @property
@@ -229,6 +235,7 @@ class FieldInfo:
         >>> fi.missing
         1
         """
+
         return self.__info["missing"]
 
     @property
@@ -236,6 +243,7 @@ class FieldInfo:
         """
         Return a dict that records all non-empty values and their counts.
         """
+
         return self.__info["valuemap"]
 
     def nonempty_list(self):

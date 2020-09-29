@@ -1,6 +1,15 @@
+"""
+Dataset parser functions.
+"""
+
 import pandas as pd
+import AVAPy.data_wizard.utils as dwutil
 
 
 def json2df(json):
-    # TODO: remove last comma in each array, if exists
-    return pd.read_json(json, orient='records')
+    """
+    Convert common JSON to pandas DataFrame.
+    """
+
+    clean_json = dwutil.remove_trailing_commas(json)
+    return pd.read_json(clean_json, orient='records')
