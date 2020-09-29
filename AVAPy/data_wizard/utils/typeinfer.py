@@ -142,8 +142,8 @@ def is_bool_field(ary) -> bool:
 
     try:
         iter(ary)
-    except TypeError:
-        raise TypeError("Argument must be iterable.")
+    except TypeError as error:
+        raise TypeError("Argument must be iterable.") from error
 
     bools = [
         [True, False],

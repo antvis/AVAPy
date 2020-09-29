@@ -38,6 +38,13 @@ Run:
 > python setup.py pytest
 ```
 
+Daily Testing:
+
+```bash
+> pytest
+> pytest -s
+```
+
 ### Build
 
 ```bash
